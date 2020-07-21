@@ -1,0 +1,26 @@
+@import '../mixins.scss';
+@import '../color.scss';
+
+.feature__header {
+  color: #000000;
+  background-color: $background-gray;
+
+  &--blue {
+    color: #ffffff;
+    background-color: $main-blue;
+  }
+}
+
+.feature__title {
+  margin: 0;
+  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: uppercase);
+}
+
+.feature__number {
+  @include text-styling($size: 14px, $weight: 400, $height: 21px, $transform: uppercase);
+}
+
+.feature__text {
+  margin: 0;
+  @include text-styling($size: 14px, $weight: 400, $height: 21px, $transform: uppercase);
+}

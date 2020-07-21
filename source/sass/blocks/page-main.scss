@@ -1,0 +1,6 @@
+@import '../mixins.scss';
+
+.page-main__title {
+  margin: 0;
+  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: uppercase);
+}
