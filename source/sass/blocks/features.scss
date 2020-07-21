@@ -1,12 +1,14 @@
-@import '../mixins.scss';
+@import "../mixins.scss";
 
 .features__title {
   margin: 0;
+
   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: uppercase);
 }
 
 .features__text {
   margin: 0;
+
   @include text-styling($size: 14px, $weight: 400, $height: 26px, $transform: uppercase);
 }
 

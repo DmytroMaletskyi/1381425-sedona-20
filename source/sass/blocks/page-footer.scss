@@ -1,6 +1,7 @@
-@import '../mixins.scss';
+@import "../mixins.scss";
 
 .page-footer__hashtag {
   margin: 0;
+
   @include text-styling($size: 21px, $weight: 700, $height: 26px, $transform: uppercase);
 }

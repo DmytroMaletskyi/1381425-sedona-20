@@ -25,6 +25,7 @@
 
 .photos-list__author-text {
   margin: 0;
+
   @include text-styling($size: 14px, $weight: 400, $height: 24px, $transform: normal);
 }
 

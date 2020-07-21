@@ -1,4 +1,4 @@
-@import '../mixins.scss';
+@import "../mixins.scss";
 
 .likes__counter {
   @include text-styling($size: 14px, $weight: 700, $height: 24px, $transform: uppercase);
