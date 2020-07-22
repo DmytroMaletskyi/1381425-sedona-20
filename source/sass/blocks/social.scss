@@ -1,0 +1,14 @@
+@import "../mixins.scss";
+@import "../color.scss";
+
+.social__list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.social__link {
+  display: block;
+  background-color: $main-blue;
+}

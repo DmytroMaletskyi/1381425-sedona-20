@@ -1,0 +1,7 @@
+@import "../mixins.scss";
+
+.gallery__text {
+  margin: 0;
+
+  @include text-styling($size: 14px, $weight: 400, $height: 24px, $transform: uppercase);
+}
