@@ -1,0 +1,28 @@
+@import "../mixins.scss";
+@import "../color.scss";
+
+.user-data {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.user-data__label {
+  @include text-styling($size: 14px, $weight: 400, $height: 26px, $transform: uppercase);
+  color: $dark-gray;
+}
+
+.user-data__input {
+  margin: 0;
+
+  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
+
+  background-color: $inputs-background;
+  border: none;
+}
+
+.user-data__input::placeholder {
+  color: $black;
+}
+

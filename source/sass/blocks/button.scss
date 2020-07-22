@@ -1,0 +1,10 @@
+@import "../mixins.scss";
+@import "../color.scss";
+
+.button {
+  @include text-styling($size: 21px, $weight: 700, $height: 26px, $transform: uppercase);
+  color: $white;
+
+  background-color: $main-blue;
+  border: none;
+}

@@ -1,0 +1,17 @@
+@import "../mixins.scss";
+@import "../color.scss";
+
+.radio-list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.radio-list__label {
+  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
+}
+
+.radio-list__input {
+  appearance: none;
+}
