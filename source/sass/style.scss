@@ -1,5 +1,8 @@
 @import "fonts.scss";
 
+// Normalizing
+@import "normalize.scss";
+
 // Blocks importing
 @import "blocks/page.scss";
 @import "blocks/page-main.scss";
