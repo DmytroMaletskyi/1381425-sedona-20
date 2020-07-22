@@ -1,5 +1,4 @@
 @mixin text-styling($size: 18px, $weight: 400, $height: 26px, $transform: uppercase) {
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: $size;
   font-weight: $weight;
   line-height: $height;
