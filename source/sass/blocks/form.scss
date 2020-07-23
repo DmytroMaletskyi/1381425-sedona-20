@@ -1,0 +1,22 @@
+@import "../mixins.scss";
+
+.form__fieldset {
+  padding: 0;
+
+  border: none;
+}
+
+.form__legend {
+  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: uppercase);
+}
+
+.form__textarea {
+  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
+
+  background-color: $inputs-background;
+  border: none;
+}
+
+.form__textarea::placeholder {
+  color: $black;
+}
