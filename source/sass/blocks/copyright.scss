@@ -1,5 +1,15 @@
 @import "../mixins.scss";
 
+.copyright {
+  position: relative;
+}
+
 .copyright__text {
   @include text-styling($size: 14px, $weight: 400, $height: 26px, $transform: uppercase);
+}
+
+.copyright__link {
+  position: absolute;
+  top: -7px;
+  right: -34px;
 }
