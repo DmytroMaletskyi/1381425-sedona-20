@@ -8,12 +8,32 @@
   list-style: none;
 }
 
+.site-list__logo-wrapper {
+  display: none;
+}
+
 .site-list__item {
   background-color: $main-blue;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+
+  &:first-of-type {
+    box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2);
+  }
+
+  &:not(:first-of-type):not(:last-of-type) {
+    box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+  }
+
+  &:last-of-type {
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+  }
 }
 
 .site-list__link {
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+
   @include text-styling($size: 18px, $weight: 700, $height: 40px, $transform: uppercase);
   color: #ffffff;
 
