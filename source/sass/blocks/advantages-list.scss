@@ -1,4 +1,5 @@
 @import "../mixins.scss";
+@import "../variables.scss";
 
 .advantages-list {
   margin: 0;
@@ -8,6 +9,16 @@
   padding-left: 20px;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+  }
 }
 
 .advantages-list__item {
@@ -16,6 +27,21 @@
   &:not(:last-of-type) {
     margin-bottom: 25px;
   }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 330px;
+    box-sizing: border-box;
+    padding-right: 35px;
+    padding-bottom: 60px;
+    padding-left: 35px;
+    &:not(:last-of-type) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .advantages-list__title {
@@ -23,10 +49,18 @@
   margin-bottom: 20px;
 
   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: uppercase);
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .advantages-list__text {
   margin: 0;
 
   @include text-styling($size: 14px, $weight: 400, $height: 21px, $transform: uppercase);
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+  }
 }

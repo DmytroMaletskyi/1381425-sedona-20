@@ -1,3 +1,4 @@
+@import "../variables.scss";
 @import "../mixins.scss";
 @import "../color.scss";
 
@@ -6,10 +7,30 @@
   margin: 0;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 56px;
+  }
 }
 
 .site-list__logo-wrapper {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: block;
+    width: 102px;
+    height: 100%;
+  }
+}
+
+.site-list__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .site-list__item {
@@ -26,6 +47,15 @@
   &:last-of-type {
     box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2);
   }
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    &:first-of-type,
+    &:not(:first-of-type):not(:last-of-type),
+    &:last-of-type {
+      box-shadow: none;
+    }
+  }
 }
 
 .site-list__link {
@@ -35,7 +65,14 @@
   align-items: center;
 
   @include text-styling($size: 18px, $weight: 700, $height: 40px, $transform: uppercase);
-  color: #ffffff;
+  color: $white;
 
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+
+    @include text-styling($size: 14px, $weight: 700, $height: 26px, $transform: uppercase);
+    color: $black;
+  }
 }
