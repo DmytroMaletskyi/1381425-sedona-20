@@ -37,19 +37,20 @@
   background-color: $main-blue;
 
   &:first-of-type {
-    box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2);
+    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
   }
 
   &:not(:first-of-type):not(:last-of-type) {
-    box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
 
   &:last-of-type {
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
 
   @media (min-width: $tablet-width) {
     background-color: transparent;
+
     &:first-of-type,
     &:not(:first-of-type):not(:last-of-type),
     &:last-of-type {
