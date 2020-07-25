@@ -1,34 +1,130 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
 .photos-list {
   padding: 0;
   margin: 0;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .photos-list__item {
   padding-top: 22px;
   padding-bottom: 15px;
   border-top: 1px solid $border-color;
+
+  &:last-of-type {
+    border-bottom: 1px solid $border-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:first-of-type {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    padding: 0;
+
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    &:first-of-type {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+  }
 }
 
-.photos-list__item:last-of-type {
-  border-bottom: 1px solid $border-color;
+.photos-list__article {
+  width: 87.5%;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .photos-list__figure {
   margin: 0;
+  margin-bottom: 11px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.photos-list__img {
+  width: 100%;
+}
+
+.photos-list__photo-footer {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    background-color: $inputs-background;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+
+    background-color: rgba($black, 0.3);
+  }
 }
 
 .photos-list__caption {
+  margin: 0;
+
   @include text-styling($size: 14px, $weight: 700, $height: 24px, $transform: uppercase);
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
 }
 
 .photos-list__author-text {
   margin: 0;
+  margin-bottom: 13px;
 
   @include text-styling($size: 14px, $weight: 400, $height: 24px, $transform: none);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
 }
 
 .photos-list__likes {
   margin: 0;
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
 }
