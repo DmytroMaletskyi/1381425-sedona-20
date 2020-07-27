@@ -14,7 +14,10 @@
   height: 55px;
 
   @media (min-width: $tablet-width) {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 51px);
+    width: 102px;
   }
 }
 
@@ -24,13 +27,19 @@
   left: calc(50% - 51px);
 }
 
+.page-header__toggle {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .page-header__nav {
-  order: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-header__intro {
-  order: 2;
-
   display: flex;
   height: 390px;
 
