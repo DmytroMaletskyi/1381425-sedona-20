@@ -1,3 +1,4 @@
+@import "../variables.scss";
 @import "../mixins.scss";
 @import "../color.scss";
 
@@ -6,16 +7,65 @@
   margin: 0;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 56px;
+  }
 }
 
 .site-list__item {
   background-color: $main-blue;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+
+  &:first-of-type {
+    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+  }
+
+  &:not(:first-of-type):not(:last-of-type) {
+    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  &:last-of-type {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: transparent;
+
+    &:first-of-type,
+    &:not(:first-of-type):not(:last-of-type),
+    &:last-of-type {
+      box-shadow: none;
+    }
+
+    &:nth-of-type(2) {
+      margin-right: 20%;
+    }
+  }
 }
 
 .site-list__link {
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+
   @include text-styling($size: 18px, $weight: 700, $height: 40px, $transform: uppercase);
-  color: #ffffff;
+  color: $white;
 
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+    height: auto;
+
+    @include text-styling($size: 14px, $weight: 700, $height: 26px, $transform: uppercase);
+    color: $black;
+  }
 }

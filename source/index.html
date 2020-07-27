@@ -3,18 +3,21 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <a class="page-header__logo">
-      <img src="https://via.placeholder.com/102x84" width="102" height="84" alt="Герб города Седона">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button" aria-label="Открыть/закрыть меню">
-      </button>
+    <nav class="page-header__nav main-nav">
+      <div class="page-header__logo-wrapper">
+        <a class="page-header__logo logo">
+          <img src="https://via.placeholder.com/102x84" width="102" height="84" alt="Герб города Седона">
+        </a>
+        <button class="page-header__toggle toggle" type="button" aria-label="Открыть/закрыть меню">
+        </button>
+      </div>
       <ul class="main-nav__list site-list">
         <li class="site-list__item site-list__item--active">
           <a class="site-list__link">Главная</a>
@@ -30,19 +33,19 @@
         </li>
       </ul>
     </nav>
-    <div class="page-header__intro intro">
-      <img class="intro__background intro__background--main" src="https://via.placeholder.com/901x389" width="901"
-        height="389" alt="">
-      <img class="intro__text intro__text--main" src="https://via.placeholder.com/282x214" width="282" height="214"
-        alt="Добро пожаловать в Седону. Потому что Гранд Каньон отстой.">
+    <div class="page-header__intro">
+      <img class="page-header__intro-text page-header__intro-text--main" src="https://via.placeholder.com/282x214"
+        width="282" height="214" alt="Добро пожаловать в Седону. Потому что Гранд Каньон отстой.">
     </div>
   </header>
 
   <main class="page-main">
     <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
     <section class="features">
-      <h2 class="features__title">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</h2>
-      <p class="features__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      <div class="features__header">
+        <h2 class="features__title">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <p class="features__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      </div>
       <ul class="features__list">
         <li class="features__item feature">
           <article class="feature__article">
@@ -51,7 +54,7 @@
               <span class="feature__number">&ndash;&numero;1&ndash;</span>
               <p class="feature__text">Седона не атракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img class="feature__img" src="https://via.placeholder.com/520x260" width="520" height="260"
+            <img class="feature__img" src="https://via.placeholder.com/520x260"
               alt="Фотография дома на фоне Седоне на фоне горы.">
           </article>
           <ul class="features__advantages-list advantages-list">
@@ -76,8 +79,7 @@
               <span class="feature__number">&ndash;&numero;2&ndash;</span>
               <p class="feature__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img class="feature__img" src="https://via.placeholder.com/520x260" width="520" height="260"
-              alt="Фотография моста Дьявола">
+            <img class="feature__img" src="https://via.placeholder.com/520x260" alt="Фотография моста Дьявола">
           </article>
         </li>
         <li class="features__item feature">
@@ -117,7 +119,7 @@
     </section>
     <section class="map">
       <h2 class="visually-hidden">Мы на карте</h2>
-      <img class="map__image" src="https://via.placeholder.com/320x350" width="320" height="350"
+      <img class="map__image" src="https://via.placeholder.com/320x350"
         alt="Расположение города Седона: 20 км на юг от Флагстаффа по 17 шоссе">
     </section>
   </main>

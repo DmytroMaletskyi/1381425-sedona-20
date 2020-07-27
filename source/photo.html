@@ -3,18 +3,21 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img src="https://via.placeholder.com/102x84" width="102" height="84" alt="Герб города Седона">
-    </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button" aria-label="Открыть/закрыть меню">
-      </button>
+      <div class="page-header__logo-wrapper">
+        <a class="page-header__logo logo">
+          <img src="https://via.placeholder.com/102x84" width="102" height="84" alt="Герб города Седона">
+        </a>
+        <button class="page-header__toggle toggle" type="button" aria-label="Открыть/закрыть меню">
+        </button>
+      </div>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a class="site-list__link" href="index.html">Главная</a>
@@ -30,74 +33,100 @@
         </li>
       </ul>
     </nav>
-    <div class="page-header__intro intro">
-      <img class="intro__background" src="https://via.placeholder.com/902x214" width="902" height="214" alt="">
-      <img class="intro__text" src="https://via.placeholder.com/229x39" width="229" height="39" alt="Седона">
+    <div class="page-header__intro">
+      <img class="page-header__intro-text " src="https://via.placeholder.com/229x39" width="229" height="39"
+        alt="Седона">
     </div>
   </header>
 
   <main class="page-main">
-    <h1 class="page-main__title">Фото и видео</h1>
+    <h1 class="visually-hidden">Галерея</h1>
     <section class="gallery">
-      <h2 class="visually-hidden">Галерея</h2>
-      <p class="gallery__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и
-        экономике.</p>
+      <div class="gallery__header">
+        <h2 class="gallery__title">Фото и видео</h2>
+        <p class="gallery__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике
+          и
+          экономике.</p>
+      </div>
       <ul class="gallery__list photos-list">
         <li class="photos-list__item">
-          <figure class="photos-list__figure">
-            <a href="blank.html">
-              <img class="photos-list__img" src="https://via.placeholder.com/280x280" width="280" height="280"
-                alt="Изображение дороги в пустыне во время заката">
-            </a>
-            <figcaption class="photos-list__caption">Неродные просторы</figcaption>
-          </figure>
-          <p class="photos-list__author-text">Автор фото: <span class="photos-list__author-name">Борис</span></p>
-          <p class="photos-list__likes likes">
-            <button class="likes__like_button" type="button" aria-label="Поставить лайк">Лайк</button>
-            <span class="likes__counter">1350</span>
-          </p>
+          <article class="photos-list__article">
+            <figure class="photos-list__figure">
+              <a class="photos-list__link" href="blank.html">
+                <img class="photos-list__img" src="https://via.placeholder.com/280x280"
+                  alt="Изображение дороги в пустыне во время заката">
+              </a>
+            </figure>
+            <div class="photos-list__photo-footer">
+              <div>
+                <h3 class="photos-list__caption">Неродные просторы</h3>
+                <p class="photos-list__author-text">Автор фото: <span class="photos-list__author-name">Борис</span></p>
+              </div>
+              <p class="photos-list__likes likes">
+                <button class="likes__like_button" type="button" aria-label="Поставить лайк">Лайк</button>
+                <span class="likes__counter">1350</span>
+              </p>
+            </div>
+          </article>
         </li>
         <li class="photos-list__item">
-          <figure class="photos-list__figure">
-            <a href="blank.html">
-              <img class="photos-list__img" src="https://via.placeholder.com/280x280" width="280" height="280"
-                alt="Изображение кактуса на фоне скал">
-            </a>
-            <figcaption class="photos-list__caption">Местная растительность</figcaption>
-          </figure>
-          <p class="photos-list__author-text">Автор фото: <span class="photos-list__author-name">Сергей</span></p>
-          <p class="photos-list__likes likes">
-            <button class="likes__like_button" type="button" aria-label="Поставить лайк">Лайк</button>
-            <span class="likes__counter">143</span>
-          </p>
+          <article class="photos-list__article">
+            <figure class="photos-list__figure">
+              <a class="photos-list__link" href="blank.html">
+                <img class="photos-list__img" src="https://via.placeholder.com/280x280"
+                  alt="Изображение кактуса на фоне скал">
+              </a>
+            </figure>
+            <div class="photos-list__photo-footer">
+              <div>
+                <h3 class="photos-list__caption">Местная растительность</h3>
+                <p class="photos-list__author-text">Автор фото: <span class="photos-list__author-name">Сергей</span></p>
+              </div>
+              <p class="photos-list__likes likes">
+                <button class="likes__like_button" type="button" aria-label="Поставить лайк">Лайк</button>
+                <span class="likes__counter">143</span>
+              </p>
+            </div>
+          </article>
         </li>
         <li class="photos-list__item">
-          <figure class="photos-list__figure">
-            <a href="blank.html">
-              <img class="photos-list__img" src="https://via.placeholder.com/280x280" width="280" height="280"
-                alt="Изображение дороги в горах">
-            </a>
-            <figcaption class="photos-list__caption">Дорога на север</figcaption>
-          </figure>
-          <p class="photos-list__author-text">Автор фото: <span class="photos-list__author-name">Петр</span></p>
-          <p class="photos-list__likes likes">
-            <button class="likes__like_button" type="button" aria-label="Поставить лайк">Лайк</button>
-            <span class="likes__counter">96</span>
-          </p>
+          <article class="photos-list__article">
+            <figure class="photos-list__figure">
+              <a class="photos-list__link" href="blank.html">
+                <img class="photos-list__img" src="https://via.placeholder.com/280x280"
+                  alt="Изображение дороги в горах">
+              </a>
+            </figure>
+            <div class="photos-list__photo-footer">
+              <div>
+                <h3 class="photos-list__caption">Дорога на север</h3>
+                <p class="photos-list__author-text">Автор фото: <span class="photos-list__author-name">Петр</span></p>
+              </div>
+              <p class="photos-list__likes likes">
+                <button class="likes__like_button" type="button" aria-label="Поставить лайк">Лайк</button>
+                <span class="likes__counter">96</span>
+              </p>
+            </div>
+          </article>
         </li>
         <li class="photos-list__item">
-          <figure class="photos-list__figure">
-            <a href="blank.html">
-              <img class="photos-list__img" src="https://via.placeholder.com/280x280" width="280" height="280"
-                alt="Изображение Моста Дьявола">
-            </a>
-            <figcaption class="photos-list__caption">Мост Дьявола</figcaption>
-          </figure>
-          <p class="photos-list__author-text">Автор фото: <span class="photos-list__author-name">Антон</span></p>
-          <p class="photos-list__likes likes">
-            <button class="likes__like_button" type="button" aria-label="Поставить лайк">Лайк</button>
-            <span class="likes__counter">254</span>
-          </p>
+          <article class="photos-list__article">
+            <figure class="photos-list__figure">
+              <a class="photos-list__link" href="blank.html">
+                <img class="photos-list__img" src="https://via.placeholder.com/280x280" alt="Изображение Моста Дьявола">
+              </a>
+            </figure>
+            <div class="photos-list__photo-footer">
+              <div>
+                <h3 class="photos-list__caption">Мост Дьявола</h3>
+                <p class="photos-list__author-text">Автор фото: <span class="photos-list__author-name">Антон</span></p>
+              </div>
+              <p class="photos-list__likes likes">
+                <button class="likes__like_button" type="button" aria-label="Поставить лайк">Лайк</button>
+                <span class="likes__counter">254</span>
+              </p>
+            </div>
+          </article>
         </li>
       </ul>
     </section>

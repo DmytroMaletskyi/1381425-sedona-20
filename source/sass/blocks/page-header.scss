@@ -1,0 +1,59 @@
+@import "../variables.scss";
+@import "../color.scss";
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__logo-wrapper {
+  position: relative;
+  order: 1;
+  display: flex;
+  justify-content: flex-end;
+  height: 55px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 51px);
+    width: 102px;
+  }
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 51px);
+}
+
+.page-header__toggle {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__intro {
+  display: flex;
+  height: 390px;
+
+  background-color: $main-blue;
+  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    height: 518px;
+    background-image: url("../../img/bg-back-tablet@1x.jpg");
+  }
+}
+
+.page-header__intro-text {
+  margin: auto;
+}

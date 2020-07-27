@@ -1,7 +1,36 @@
 @import "../mixins.scss";
+@import "../variables.scss";
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
 
 .page-footer__hashtag {
   margin: 0;
+  margin-bottom: 34px;
 
   @include text-styling($size: 21px, $weight: 700, $height: 26px, $transform: uppercase);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__social {
+  margin-bottom: 45px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }

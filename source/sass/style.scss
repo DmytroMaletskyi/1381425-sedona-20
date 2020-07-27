@@ -4,7 +4,9 @@
 @import "normalize.scss";
 
 // Blocks importing
+@import "other.scss";
 @import "blocks/page.scss";
+@import "blocks/page-header.scss";
 @import "blocks/page-main.scss";
 @import "blocks/site-list.scss";
 @import "blocks/features.scss";
@@ -25,4 +27,3 @@
 @import "blocks/page-footer.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
-@import "other.scss";
