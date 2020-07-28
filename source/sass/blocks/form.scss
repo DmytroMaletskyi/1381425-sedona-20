@@ -15,13 +15,15 @@
 }
 
 .form__fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   padding: 0;
   padding-top: 20px;
   padding-bottom: 25px;
 
   border: none;
-  border-top: 1px solid $border-color;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -67,12 +69,6 @@
       margin-bottom: 58px;
     }
   }
-}
-
-.form__fieldset-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .form__legend {
