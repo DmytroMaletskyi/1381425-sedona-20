@@ -1,14 +1,43 @@
 @import "../mixins.scss";
 @import "../color.scss";
+@import "../variables.scss";
+
+.hotel-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  margin: 0 auto 50px;
+  padding-top: 33px;
+
+  @media (min-width: $tablet-width) {
+    width: 458px;
+    margin-bottom: 58px;
+    padding-top: 58px;
+  }
+}
 
 .hotel-search__title {
   margin: 0;
+  margin-bottom: 35px;
 
   @include text-styling($size: 21px, $weight: 700, $height: 26px, $transform: uppercase);
+  text-align: center;
 }
 
 .hotel-search__text {
   margin: 0;
+  margin-bottom: 35px;
 
   @include text-styling($size: 14px, $weight: 400, $height: 24px, $transform: uppercase);
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+}
+
+.hotel-search__button {
+  width: 100%;
+  min-height: 58px;
 }
