@@ -1,12 +1,26 @@
 @import "../mixins.scss";
 
 .form__fieldset {
+  margin: 0;
   padding: 0;
+  padding-top: 20px;
+  padding-bottom: 25px;
 
   border: none;
+  border-top: 1px solid $border-color;
+}
+
+.form__fieldset-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 87.5%;
+  margin: 0 auto;
 }
 
 .form__legend {
+  margin-bottom: 20px;
+
   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: uppercase);
 }
 
