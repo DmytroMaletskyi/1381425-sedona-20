@@ -1,13 +1,95 @@
 @import "../mixins.scss";
 
+.video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.video-section__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 83%;
+  max-width: 445px;
+  margin: 0 auto 33px;
+  padding-top: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 68px;
+    padding-top: 60px;
+  }
+}
+
 .video-section__title {
   margin: 0;
+  margin-bottom: 33px;
 
   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: uppercase);
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .video-section__text {
   margin: 0;
 
   @include text-styling($size: 14px, $weight: 400, $height: 24px, $transform: uppercase);
+  text-align: center;
+}
+
+.video-section__video-container {
+  position: relative;
+  width: 100%;
+  max-width: 648px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 800px;
+  }
+}
+
+.video-section__video {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    max-width: 800px;
+    height: 500px;
+  }
+}
+
+.video-section__video-controls {
+  display: flex;
+  align-items: center;
+  width: 87.5%;
+  height: 66px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  background-color: $inputs-background;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 93px;
+    margin: 0;
+    padding: 0;
+
+    background-color: rgba($black, 0.6);
+  }
 }
