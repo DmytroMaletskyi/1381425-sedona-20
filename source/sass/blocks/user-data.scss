@@ -8,6 +8,10 @@
   padding-top: 20px;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 55px;
+  }
 }
 
 .user-data__item {
