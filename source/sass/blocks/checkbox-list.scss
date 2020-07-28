@@ -2,16 +2,21 @@
 @import "../color.scss";
 
 .checkbox-list {
-  padding: 0;
+  width: 100%;
   margin: 0;
+  padding: 0;
+  padding-top: 36px;
 
   list-style: none;
 }
 
-.checkbox-list__label {
-  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
+.checkbox-list__item {
+  &:not(:last-of-type) {
+    margin-bottom: 54px;
+  }
 }
 
 .checkbox-list__input {
-  appearance: none;
+  margin: 0;
+  padding-left: 78px;
 }

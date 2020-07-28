@@ -3,8 +3,9 @@
 
 .user-data {
   width: 100%;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  padding-top: 20px;
 
   list-style: none;
 }
@@ -17,29 +18,14 @@
 
 .user-data__input {
   display: flex;
+  align-items: center;
   margin: 0;
 }
 
-// .user-data__label {
-//   margin-right: 12px;
+.user-data__label {
+  margin-right: 12px;
+}
 
-//   @include text-styling($size: 14px, $weight: 400, $height: 26px, $transform: uppercase);
-//   color: $dark-gray;
-// }
-
-// .user-data__input {
-//   flex-grow: 1;
-//   height: 58px;
-//   box-sizing: border-box;
-//   // margin: 0;
-//   // padding: 18px 22px 14px;
-
-//   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
-
-//   background-color: $inputs-background;
-//   border: none;
-// }
-
-// .user-data__input::placeholder {
-//   color: $black;
-// }
+.user-data__input-field {
+  width: 100%;
+}

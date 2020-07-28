@@ -2,26 +2,27 @@
 @import "../color.scss";
 
 .contact-data {
-  padding: 0;
+  width: 100%;
   margin: 0;
+  padding: 0;
+  padding-top: 17px;
 
   list-style: none;
 }
 
-.contact-data__label {
-  @include text-styling($size: 14px, $weight: 400, $height: 26px, $transform: uppercase);
-  color: $dark-gray;
+.contact-data__item {
+  &:first-of-type {
+    margin-bottom: 14px;
+  }
 }
 
 .contact-data__input {
+  display: flex;
+  flex-direction: column;
   margin: 0;
-
-  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
-
-  background-color: $inputs-background;
-  border: none;
 }
 
-.contact-data__input::placeholder {
-  color: $black;
+.contact-data__label {
+  margin-bottom: 8px;
+  margin-left: 22px;
 }

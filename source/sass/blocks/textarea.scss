@@ -1,0 +1,20 @@
+@import "../mixins.scss";
+@import "../color.scss";
+@import "../variables.scss";
+
+.textarea__field {
+  width: 100%;
+  min-height: 160px;
+  box-sizing: border-box;
+  padding: 13px 23px;
+
+  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
+
+  background-color: $inputs-background;
+  border: none;
+  resize: none;
+
+  &::placeholder {
+    color: $black;
+  }
+}

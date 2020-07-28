@@ -1,0 +1,11 @@
+@import "../mixins.scss";
+@import "../color.scss";
+@import "../variables.scss";
+
+.radio-button__label {
+  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
+}
+
+.radio-button__button {
+  appearance: none;
+}

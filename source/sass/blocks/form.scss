@@ -1,5 +1,10 @@
 @import "../mixins.scss";
 
+.form {
+  width: 87.5%;
+  margin: 0 auto 48px;
+}
+
 .form__fieldset {
   margin: 0;
   padding: 0;
@@ -14,23 +19,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 87.5%;
-  margin: 0 auto;
 }
 
 .form__legend {
-  margin-bottom: 20px;
-
   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: uppercase);
+  text-align: center;
 }
 
-.form__textarea {
-  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
-
-  background-color: $inputs-background;
-  border: none;
+.form__textarea-container {
+  width: 100%;
+  padding-top: 15px;
 }
 
-.form__textarea::placeholder {
-  color: $black;
+.form__button {
+  width: 100%;
 }
