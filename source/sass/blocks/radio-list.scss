@@ -2,16 +2,25 @@
 @import "../color.scss";
 
 .radio-list {
-  padding: 0;
+  width: 100%;
   margin: 0;
+  padding: 0;
+  padding-top: 37px;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 73px;
+  }
 }
 
-.radio-list__label {
-  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
+.radio-list__item {
+  &:not(:last-of-type) {
+    margin-bottom: 43px;
+  }
 }
 
 .radio-list__input {
-  appearance: none;
+  margin: 0;
+  padding-left: 78px;
 }

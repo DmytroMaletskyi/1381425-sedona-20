@@ -1,0 +1,23 @@
+@import "../mixins.scss";
+@import "../color.scss";
+@import "../variables.scss";
+
+.input__label {
+  @include text-styling($size: 14px, $weight: 400, $height: 26px, $transform: uppercase);
+  color: $dark-gray;
+}
+
+.input__field {
+  height: 58px;
+  box-sizing: border-box;
+  padding: 18px 21px 14px;
+
+  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
+
+  background-color: $inputs-background;
+  border: none;
+
+  &::placeholder {
+    color: $black;
+  }
+}

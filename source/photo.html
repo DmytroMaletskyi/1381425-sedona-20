@@ -10,7 +10,7 @@
 
 <body class="page__body">
   <header class="page-header">
-    <nav class="main-nav">
+    <nav class="page-header__nav main-nav">
       <div class="page-header__logo-wrapper">
         <a class="page-header__logo logo">
           <img src="https://via.placeholder.com/102x84" width="102" height="84" alt="Герб города Седона">
@@ -131,17 +131,22 @@
       </ul>
     </section>
     <section class="video-section">
-      <h2 class="video-section__title">Все еще сомневаетесь?</h2>
-      <p class="video-section__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
-        раз!</p>
-      <video class="video-section__video" width="320" height="201" controls>
-        <source src="example.webm" type="video/webm">
-        <source src="example.mp4" type="video/mp4">
-      </video>
-      <div class="video-section__video-controls video-controls">
-        <button class="video-controls__replay" type="button" aria-label="Повтор"></button>
-        <button class="video-controls__subtitles" type="button" aria-label="Субтитры"></button>
-        <button class="video-controls__full-screen" type="button" aria-label="Открыть на полный экран"></button>
+      <div class="video-section__header">
+        <h2 class="video-section__title">Все еще сомневаетесь?</h2>
+        <p class="video-section__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+          очередной
+          раз!</p>
+      </div>
+      <div class="video-section__video-container">
+        <video class="video-section__video" width="320" height="201" controls>
+          <source src="example.webm" type="video/webm">
+          <source src="example.mp4" type="video/mp4">
+        </video>
+        <div class="video-section__video-controls video-controls">
+          <button class="video-controls__replay" type="button" aria-label="Повтор"></button>
+          <button class="video-controls__subtitles" type="button" aria-label="Субтитры"></button>
+          <button class="video-controls__full-screen" type="button" aria-label="Открыть на полный экран"></button>
+        </div>
       </div>
     </section>
   </main>

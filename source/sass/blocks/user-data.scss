@@ -2,26 +2,34 @@
 @import "../color.scss";
 
 .user-data {
-  padding: 0;
+  width: 100%;
   margin: 0;
+  padding: 0;
+  padding-top: 20px;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 55px;
+  }
 }
 
-.user-data__label {
-  @include text-styling($size: 14px, $weight: 400, $height: 26px, $transform: uppercase);
-  color: $dark-gray;
+.user-data__item {
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
 }
 
 .user-data__input {
+  display: flex;
+  align-items: center;
   margin: 0;
-
-  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
-
-  background-color: $inputs-background;
-  border: none;
 }
 
-.user-data__input::placeholder {
-  color: $black;
+.user-data__label {
+  margin-right: 12px;
+}
+
+.user-data__input-field {
+  width: 100%;
 }

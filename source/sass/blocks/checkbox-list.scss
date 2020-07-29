@@ -2,16 +2,40 @@
 @import "../color.scss";
 
 .checkbox-list {
-  padding: 0;
+  width: 100%;
   margin: 0;
+  padding: 0;
+  padding-top: 36px;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-gap: 42px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 46px);
+    padding-top: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.checkbox-list__label {
-  @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
+.checkbox-list__item {
+  &:not(:last-of-type) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:not(:last-of-type) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .checkbox-list__input {
-  appearance: none;
+  margin: 0;
+  padding-left: 78px;
 }

@@ -2,6 +2,12 @@
 @import "../color.scss";
 
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 58px;
+  padding: 0;
+
   @include text-styling($size: 21px, $weight: 700, $height: 26px, $transform: uppercase);
   color: $white;
 
