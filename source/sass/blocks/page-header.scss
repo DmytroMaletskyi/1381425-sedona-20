@@ -6,33 +6,6 @@
   flex-direction: column;
 }
 
-.page-header__logo-wrapper {
-  position: relative;
-  order: 1;
-  display: flex;
-  justify-content: flex-end;
-  height: 55px;
-
-  @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 0;
-    left: calc(50% - 51px);
-    width: 102px;
-  }
-}
-
-.page-header__logo {
-  position: absolute;
-  top: 0;
-  left: calc(50% - 51px);
-}
-
-.page-header__toggle {
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
 .page-header__nav {
   position: relative;
   display: flex;
