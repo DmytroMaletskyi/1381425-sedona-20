@@ -87,29 +87,29 @@
     color: $black;
 
     background-color: transparent;
-  }
-
-  &:hover,
-  &:focus {
-    color: $main-blue;
-    background-color: transparent;
-  }
-
-  &:active {
-    color: rgba($black, 0.3);
-    background-color: transparent;
-  }
-
-  &--active{
-    color: $active-link;
 
     &:hover,
     &:focus {
-      color: $active-link-hover;
+      color: $main-blue;
+      background-color: transparent;
     }
 
     &:active {
-      color: rgba($active-link, 0.3);
+      color: rgba($black, 0.3);
+      background-color: transparent;
+    }
+
+    &--active{
+      color: $active-link;
+
+      &:hover,
+      &:focus {
+        color: $active-link-hover;
+      }
+
+      &:active {
+        color: rgba($active-link, 0.3);
+      }
     }
   }
 }

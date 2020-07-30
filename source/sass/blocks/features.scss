@@ -3,6 +3,10 @@
 
 .features {
   padding-top: 32px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+  }
 }
 
 .features__header {
@@ -13,7 +17,7 @@
 
   @media (min-width: $tablet-width) {
     width: 70%;
-    margin: 0 auto 55px;
+    margin: 0 auto 52px;
   }
 }
 

@@ -3,6 +3,8 @@
 @import "../variables.scss";
 
 .feature {
+  position: relative;
+
   @media (min-width: $tablet-width) {
     &:first-of-type {
       .feature__article {
@@ -81,6 +83,7 @@
 
   @media (min-width: $tablet-width) {
     min-height: 256px;
+    padding-top: 42px;
     padding-right: 32px;
     padding-left: 32px;
   }
@@ -89,6 +92,19 @@
 .feature:nth-of-type(2) .feature__header--blue {
   padding-top: 39px;
   padding-bottom: 35px;
+}
+
+.feature:nth-of-type(3)::after,
+.feature:nth-of-type(4)::after {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    bottom: 2px;
+    left: 6%;
+    content: "";
+    width: 88%;
+    height: 1px;
+    background-color: $feature-border;
+  }
 }
 
 .feature__title {
@@ -107,6 +123,10 @@
   margin-bottom: 17px;
 
   @include text-styling($size: 14px, $weight: 400, $height: 21px, $transform: uppercase);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+  }
 }
 
 .feature__text {
