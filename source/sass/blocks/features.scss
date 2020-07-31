@@ -7,17 +7,25 @@
   @media (min-width: $tablet-width) {
     padding-top: 45px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 57px;
+  }
 }
 
 .features__header {
   display: flex;
   flex-direction: column;
   width: 81.25%;
+  max-width: 484px;
   margin: 0 auto 50px;
 
   @media (min-width: $tablet-width) {
-    width: 70%;
-    margin: 0 auto 52px;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
   }
 }
 
