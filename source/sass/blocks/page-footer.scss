@@ -4,8 +4,7 @@
 .page-footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 30px;
+  padding-top: 36px;
   padding-bottom: 25px;
 
   @media (min-width: $tablet-width) {
@@ -17,8 +16,7 @@
 }
 
 .page-footer__hashtag {
-  margin: 0;
-  margin-bottom: 34px;
+  margin: 0 auto 33px;
 
   @include text-styling($size: 21px, $weight: 700, $height: 26px, $transform: uppercase);
 
@@ -28,9 +26,14 @@
 }
 
 .page-footer__social {
-  margin-bottom: 45px;
+  margin: 0 auto 44px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
   }
+}
+
+.page-footer__copyright {
+  margin: 0;
+  margin-left: 96px;
 }
