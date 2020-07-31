@@ -4,13 +4,14 @@
 .page-footer {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   padding-top: 36px;
   padding-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     width: 84.2%;
-    max-height: 120px;
+    min-height: 120px;
     margin: 0 auto;
     padding: 0;
     padding-top: 32px;
