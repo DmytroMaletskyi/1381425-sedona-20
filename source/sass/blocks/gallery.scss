@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .gallery {
-  padding-top: 24px;
+  padding-top: 31px;
 
   @media (min-width: $tablet-width) {
     width: 84%;
@@ -19,8 +19,8 @@
 .gallery__header {
   display: flex;
   flex-direction: column;
-  width: 285px;
-  margin: 0 auto 15px;
+  width: 89%;
+  margin: 0 auto 31px;
 
   @media (min-width: $tablet-width) {
     width: 458px;
@@ -30,7 +30,7 @@
 
 .gallery__title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 
   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: uppercase);
   text-align: center;
