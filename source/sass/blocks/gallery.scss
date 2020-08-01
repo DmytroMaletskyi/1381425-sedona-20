@@ -7,7 +7,7 @@
   @media (min-width: $tablet-width) {
     width: 84%;
     margin: 0 auto;
-    padding-top: 60px;
+    padding-top: 63px;
   }
 
   @media (min-width: $desktop-width) {
@@ -23,8 +23,8 @@
   margin: 0 auto 31px;
 
   @media (min-width: $tablet-width) {
-    width: 458px;
-    margin: 0 auto 60px;
+    width: 446px;
+    margin: 0 auto 77px;
   }
 }
 
@@ -36,6 +36,7 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 34px;
     font-size: 30px;
   }
 }

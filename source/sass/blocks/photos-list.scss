@@ -28,16 +28,21 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding: 0;
+
+    border: none;
+
     &:first-of-type {
       grid-row-start: 1;
       grid-row-end: 2;
       grid-column-start: 1;
       grid-column-end: 3;
+
+      .photos-list__photo-footer {
+        padding-top: 13px;
+        padding-right: 19px;
+      }
     }
-
-    padding: 0;
-
-    border: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -77,10 +82,11 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     height: 80px;
-    padding-right: 20px;
-    padding-left: 20px;
+    box-sizing: border-box;
+    padding-top: 12px;
+    padding-right: 23px;
+    padding-left: 19px;
 
     background-color: $inputs-background;
   }
@@ -100,6 +106,10 @@
   margin: 0;
 
   @include text-styling($size: 14px, $weight: 700, $height: 24px, $transform: uppercase);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 2px;
+  }
 
   @media (min-width: $desktop-width) {
     color: $white;
