@@ -91,19 +91,18 @@
     min-height: 256px;
     padding-top: 42px;
 
-  &--blue {
-    padding-top: 42px;
-    padding-right: 32px;
-    padding-left: 32px;
-    }
+    &--blue {
+      padding-top: 42px;
+      padding-right: 32px;
+      padding-left: 32px;
+      }
   }
 
   @media (min-width: $desktop-width) {
-
-  &--blue {
-    padding-top: 48px;
-    padding-right: 64px;
-    padding-left: 64px;
+    &--blue {
+      padding-top: 48px;
+      padding-right: 64px;
+      padding-left: 64px;
     }
   }
 }
@@ -201,7 +200,6 @@
   @media (max-width: $mobile-width-only) {
     padding: 0 10px;
   }
-
 }
 
 .feature__img {
