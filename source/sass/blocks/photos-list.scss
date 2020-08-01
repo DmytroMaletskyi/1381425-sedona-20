@@ -51,6 +51,11 @@
     &:first-of-type {
       grid-column-start: 1;
       grid-column-end: 4;
+
+      .photos-list__photo-footer {
+        padding-top: 17px;
+        padding-right: 19px;
+      }
     }
   }
 }
@@ -75,6 +80,7 @@
 }
 
 .photos-list__img {
+  display: block;
   width: 100%;
 }
 
@@ -97,6 +103,8 @@
     right: 0;
     bottom: 0;
     z-index: 10;
+    padding-top: 15px;
+    padding-left: 22px;
 
     background-color: rgba($black, 0.3);
   }
