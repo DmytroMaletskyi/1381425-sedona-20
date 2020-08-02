@@ -39,7 +39,7 @@
       grid-column-end: 3;
 
       .photos-list__photo-footer {
-        padding-top: 13px;
+        padding-top: 15px;
         padding-right: 19px;
       }
     }
@@ -72,7 +72,7 @@
 
 .photos-list__figure {
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -90,7 +90,7 @@
     justify-content: space-between;
     height: 80px;
     box-sizing: border-box;
-    padding-top: 12px;
+    padding-top: 17px;
     padding-right: 23px;
     padding-left: 19px;
 
@@ -112,14 +112,12 @@
 
 .photos-list__caption {
   margin: 0;
+  margin-bottom: 2px;
 
   @include text-styling($size: 14px, $weight: 700, $height: 24px, $transform: uppercase);
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 2px;
-  }
-
   @media (min-width: $desktop-width) {
+    margin-bottom: 0;
     color: $white;
   }
 }
