@@ -10,10 +10,21 @@
 }
 
 .social__item:not(:last-of-type) {
-  margin-right: 5px;
+  margin-right: 6px;
 }
 
 .social__link {
   display: block;
+  width: 46px;
+  height: 48px;
   background-color: $main-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $blue-hover;
+  }
+
+  &:active {
+    background-color: $blue-active;
+  }
 }

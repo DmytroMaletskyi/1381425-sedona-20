@@ -3,23 +3,35 @@
 
 .features {
   padding-top: 32px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+  }
 }
 
 .features__header {
   display: flex;
   flex-direction: column;
-  width: 285px;
-  margin: 0 auto 55px;
+  width: 81.25%;
+  max-width: 484px;
+  margin: 0 auto 50px;
 
   @media (min-width: $tablet-width) {
-    width: 70%;
-    margin: 0 auto 55px;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 42px;
   }
 }
 
 .features__title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 31px;
 
   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: uppercase);
   text-align: center;

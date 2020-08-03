@@ -1,5 +1,29 @@
 @import "../mixins.scss";
 
+.likes {
+  position: relative;
+  min-width: 66px;
+  box-sizing: border-box;
+  padding-left: 37px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 14px;
+  }
+}
+
+.likes__like-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 21px;
+
+  @media (min-width: $tablet-width) {
+    top: 14px;
+    left: 3px;
+  }
+}
+
 .likes__counter {
   @include text-styling($size: 14px, $weight: 700, $height: 24px, $transform: uppercase);
 }
