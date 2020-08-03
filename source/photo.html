@@ -159,12 +159,17 @@
           раз!</p>
       </div>
       <div class="video-section__video-container">
-        <video class="video-section__video" width="320" height="201" controls>
+        <video class="video-section__video" width="320" height="201">
           <source src="example.webm" type="video/webm">
           <source src="example.mp4" type="video/mp4">
         </video>
         <div class="video-section__video-controls video-controls">
           <button class="video-controls__replay" type="button" aria-label="Повтор"></button>
+          <div class="video-controls__scrub-bar scrub-bar">
+            <div class="scrub-bar__bar">
+              <div class="scrub-bar__playhead"></div>
+            </div>
+          </div>
           <button class="video-controls__subtitles" type="button" aria-label="Субтитры"></button>
           <button class="video-controls__full-screen" type="button" aria-label="Открыть на полный экран"></button>
         </div>

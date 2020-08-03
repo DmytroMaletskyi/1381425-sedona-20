@@ -1,0 +1,53 @@
+.video-controls {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 87.5%;
+  height: 63px;
+  box-sizing: border-box;
+  padding-top: 21px;
+  padding-right: 23px;
+  padding-left: 25px;
+
+  background-color: $inputs-background;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    height: 93px;
+
+    background-color: rgba($black, 0.6);
+  }
+}
+
+.video-controls__replay {
+  width: 18px;
+  height: 19px;
+  margin-right: auto;
+  padding: 0;
+  border: none;
+  background-color: $white;
+}
+
+.video-controls__scrub-bar {
+  position: absolute;
+  top: -47px;
+  left: 0;
+  right: 0;
+}
+
+.video-controls__subtitles {
+  width: 34px;
+  height: 20px;
+  margin-right: 31px;
+  padding: 0;
+  border: none;
+  background-color: $white;
+}
+
+.video-controls__full-screen {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background-color: $white;
+}
