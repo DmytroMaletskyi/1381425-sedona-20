@@ -6,34 +6,55 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 280px;
+  width: 87.5%;
+  max-width: 458px;
   margin: 0 auto 50px;
-  padding-top: 33px;
+  padding-top: 32px;
 
   @media (min-width: $tablet-width) {
     width: 458px;
     margin-bottom: 58px;
-    padding-top: 58px;
+    padding-top: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 67px;
   }
 }
 
 .hotel-search__title {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 21px;
 
   @include text-styling($size: 21px, $weight: 700, $height: 26px, $transform: uppercase);
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 33px;
+    font-size: 30px;
+  }
+
 }
 
 .hotel-search__text {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
 
   @include text-styling($size: 14px, $weight: 400, $height: 24px, $transform: uppercase);
   text-align: center;
 
+  @media (max-width: $mobile-width-only) {
+    & br {
+      display: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 45px;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 44px;
   }
 }
 
