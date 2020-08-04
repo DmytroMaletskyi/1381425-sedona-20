@@ -2,8 +2,7 @@
 @import "../variables.scss";
 
 .form {
-  width: 87.5%;
-  margin: 0 auto 48px;
+  margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -14,14 +13,34 @@
   }
 }
 
+.form__fieldset-container {
+  position: relative;
+  padding-top: 21px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    height: 1px;
+
+    background-color: $border-color;
+  }
+
+  &:last-of-type {
+    margin-bottom: 25px;
+  }
+}
+
 .form__fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
+  width: 87.5%;
+  margin: 0 auto;
   padding: 0;
-  padding-top: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
 
   border: none;
 
@@ -90,7 +109,8 @@
 }
 
 .form__button {
-  width: 100%;
+  width: 87.5%;
+  margin: 0 auto;
 }
 
 .form__comment {

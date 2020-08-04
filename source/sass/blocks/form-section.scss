@@ -7,7 +7,7 @@
   align-items: center;
   width: 87.5%;
   max-width: 440px;
-  margin: 0 auto 15px;
+  margin: 0 auto 17px;
   padding-top: 36px;
 
   @media (min-width: $tablet-width) {
@@ -23,7 +23,7 @@
 
 .form-section__title {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
 
   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: uppercase);
   text-align: center;
