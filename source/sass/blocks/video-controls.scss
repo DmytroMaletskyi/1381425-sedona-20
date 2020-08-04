@@ -49,6 +49,11 @@
     width: 389px;
     margin-right: 41px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 540px;
+    margin-right: 43px;
+  }
 }
 
 .video-controls__subtitles {
