@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   padding-top: 16px;
-  padding-bottom: 3px;
+  padding-bottom: 1px;
 
   list-style: none;
 
@@ -40,7 +40,7 @@
 }
 
 .contact-data__label {
-  margin-bottom: 8px;
+  margin-bottom: 9px;
   margin-left: 22px;
 
   @media (min-width: $desktop-width) {

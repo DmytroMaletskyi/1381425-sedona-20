@@ -6,15 +6,31 @@
   width: 100%;
   min-height: 160px;
   box-sizing: border-box;
-  padding: 13px 21px;
+  padding: 9px 17px;
 
   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
 
   background-color: $inputs-background;
-  border: none;
+  border: 4px solid $inputs-background;
   resize: none;
 
   &::placeholder {
     color: $black;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $border-color;
+    border-color: $border-color;
+    outline: none;
+  }
+
+  &:active {
+    background-color: white;
+    border-color: $border-color;
+  }
+
+  &:active:focus {
+    background-color: white;
   }
 }
