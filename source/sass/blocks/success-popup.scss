@@ -1,0 +1,52 @@
+@import "../mixins.scss";
+@import "../color.scss";
+@import "../variables.scss";
+
+.success-popup {
+  max-width: 640px;
+}
+
+.success-popup__container {
+  padding-top: 40px;
+  padding-right: 42px;
+  padding-left: 41px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 52px;
+  }
+}
+
+.success-popup__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
+}
+
+.success-popup__text {
+  margin: 0;
+  margin-bottom: 42px;
+}
+
+.success-popup__footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: $inputs-background;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+}
+
+.success-popup__button {
+  width: 100%;
+  max-width: 458px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+}
