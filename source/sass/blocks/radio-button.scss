@@ -9,7 +9,7 @@
   &::before {
     position: absolute;
     top: -17px;
-    left: -78px;
+    left: -75px;
     width: 55px;
     height: 55px;
     box-sizing: border-box;
@@ -25,7 +25,7 @@
   &:checked + .radio-button__label::after {
     position: absolute;
     top: 1px;
-    left: -60px;
+    left: -57px;
     width: 20px;
     height: 20px;
     box-sizing: border-box;

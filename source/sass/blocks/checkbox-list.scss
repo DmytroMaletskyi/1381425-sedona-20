@@ -12,9 +12,12 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-gap: 42px;
+    grid-row-gap: 42px;
+    grid-column-gap: 54px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 46px);
+    width: 70%;
+    margin: 0 auto;
     padding-top: 59px;
   }
 

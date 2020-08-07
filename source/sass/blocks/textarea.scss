@@ -33,4 +33,8 @@
   &:active:focus {
     background-color: white;
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 12px 17px;
+  }
 }

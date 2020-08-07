@@ -24,6 +24,10 @@
 .contact-data__item {
   &:first-of-type {
     margin-bottom: 13px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 23px;
+    }
   }
 }
 
