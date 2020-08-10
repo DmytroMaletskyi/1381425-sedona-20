@@ -9,13 +9,17 @@
   &::before {
     position: absolute;
     top: -17px;
-    left: -75px;
+    left: -77px;
     width: 55px;
     height: 55px;
     box-sizing: border-box;
     border-radius: 50%;
     content: "";
     background-color: $inputs-background;
+
+    @media (min-width: $tablet-width) {
+      left: -75px;
+    }
   }
 }
 
@@ -25,13 +29,17 @@
   &:checked + .radio-button__label::after {
     position: absolute;
     top: 1px;
-    left: -57px;
+    left: -60px;
     width: 20px;
     height: 20px;
     box-sizing: border-box;
     border-radius: 50%;
     content: "";
     background-color: $dark-gray;
+
+    @media (min-width: $tablet-width) {
+      left: -58px;
+    }
   }
 
   &:hover + .radio-button__label::before,

@@ -14,6 +14,7 @@
 
   @media (min-width: $desktop-width) {
     width: 100%;
+    margin-bottom: 68px;
   }
 }
 
@@ -93,20 +94,10 @@
       & .form__legend {
         text-align: center;
       }
-
-      // &::before {
-      //   position: absolute;
-      //   top: 0;
-      //   left: 0;
-      //   content: "";
-      //   height: 1px;
-      //   width: 10px;
-      //   background-color: $separator-gray;
-      // }
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
 
     &:nth-of-type(1) {
       margin-bottom: 68px;
@@ -117,6 +108,37 @@
       margin-bottom: 68px;
       & .form__legend {
         padding-left: 80px;;
+      }
+    }
+
+    &:nth-of-type(2),
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+      .form__fieldset::before {
+        position: absolute;
+        top: 9px;
+        left: 0;
+        content: "";
+        height: 1px;
+        width: 280px;
+        background-color: $separator-gray;
+      }
+
+      .form__fieldset::after {
+        position: absolute;
+        top: 9px;
+        right: 0;
+        content: "";
+        height: 1px;
+        width: 280px;
+        background-color: $separator-gray;
+      }
+    }
+
+    &:nth-of-type(4) {
+      .form__fieldset::before,
+      .form__fieldset::after {
+        top: 26px;
       }
     }
   }
