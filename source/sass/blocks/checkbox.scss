@@ -4,6 +4,7 @@
 
 .checkbox__label {
   position: relative;
+
   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
 
   &::before {

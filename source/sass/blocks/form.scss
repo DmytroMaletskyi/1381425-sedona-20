@@ -98,7 +98,6 @@
   }
 
   @media (min-width: $desktop-width) {
-
     &:nth-of-type(1) {
       margin-bottom: 68px;
       padding-left: 81px;
@@ -106,8 +105,9 @@
 
     &:nth-of-type(3) {
       margin-bottom: 68px;
+
       & .form__legend {
-        padding-left: 80px;;
+        padding-left: 80px;
       }
     }
 
