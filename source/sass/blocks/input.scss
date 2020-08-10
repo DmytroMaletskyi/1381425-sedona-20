@@ -2,6 +2,10 @@
 @import "../color.scss";
 @import "../variables.scss";
 
+.input {
+  position: relative;
+}
+
 .input__label {
   @include text-styling($size: 14px, $weight: 400, $height: 26px, $transform: uppercase);
   color: $dark-gray;
@@ -10,14 +14,51 @@
 .input__field {
   height: 58px;
   box-sizing: border-box;
-  padding: 18px 21px 14px;
+  padding: 15px 20px 14px;
 
   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
 
   background-color: $inputs-background;
-  border: none;
+  border: 4px solid $inputs-background;
 
   &::placeholder {
     color: $black;
   }
+
+  &:hover,
+  &:focus {
+    background-color: $border-color;
+    border-color: $border-color;
+    outline: none;
+  }
+
+  &:active {
+    background-color: white;
+    border-color: $border-color;
+  }
+
+  &:active:focus {
+    background-color: white;
+  }
+}
+
+.contact-data__item .input::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+
+  background-color: $dark-border-color;
+}
+
+.contact-data__item:nth-of-type(1) .input::before {
+  content: url("../../img/icon-phone.svg");
+}
+
+.contact-data__item:nth-of-type(2) .input::before {
+  content: url("../../img/icon-mail.svg");
 }

@@ -13,4 +13,18 @@
 
   background-color: $main-blue;
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $blue-hover;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+    background-color: $blue-active;
+  }
+
+  &:disabled {
+    background-color: $border-color;
+  }
 }

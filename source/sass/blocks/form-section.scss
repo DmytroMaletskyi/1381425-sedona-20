@@ -1,34 +1,42 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+.form-section {
+  @media (min-width: $desktop-width) {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
 .form-section__header {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 87.5%;
   max-width: 440px;
-  margin: 0 auto 15px;
+  margin: 0 auto 17px;
   padding-top: 36px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 72px;
-    padding-top: 64px;
+    margin-bottom: 86px;
+    padding-top: 62px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 114px;
-    padding-top: 56px;
+    margin-bottom: 58px;
+    padding-top: 113px;
   }
 }
 
 .form-section__title {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
 
   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: uppercase);
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 33px;
     font-size: 30px;
   }
 }

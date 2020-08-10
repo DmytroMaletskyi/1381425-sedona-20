@@ -5,21 +5,29 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  padding-top: 36px;
+  padding-top: 31px;
+  padding-bottom: 15px;
 
   list-style: none;
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-gap: 42px;
+    grid-row-gap: 42px;
+    grid-column-gap: 61px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 46px);
+    width: 71%;
+    margin: 0 auto;
     padding-top: 59px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 33px;
+    padding-bottom: 0;
   }
 }
 
@@ -37,5 +45,5 @@
 
 .checkbox-list__input {
   margin: 0;
-  padding-left: 78px;
+  padding-left: 74px;
 }

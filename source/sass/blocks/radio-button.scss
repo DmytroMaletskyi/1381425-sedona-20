@@ -3,9 +3,56 @@
 @import "../variables.scss";
 
 .radio-button__label {
+  position: relative;
+
   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: none);
+
+  &::before {
+    position: absolute;
+    top: -17px;
+    left: -77px;
+    width: 55px;
+    height: 55px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    content: "";
+    background-color: $inputs-background;
+
+    @media (min-width: $tablet-width) {
+      left: -75px;
+    }
+  }
 }
 
 .radio-button__button {
   appearance: none;
+
+  &:checked + .radio-button__label::after {
+    position: absolute;
+    top: 1px;
+    left: -60px;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    content: "";
+    background-color: $dark-gray;
+
+    @media (min-width: $tablet-width) {
+      left: -58px;
+    }
+  }
+
+  &:hover + .radio-button__label::before,
+  &:focus + .radio-button__label::before {
+    background-color: $border-color;
+  }
+
+  &:active + .radio-button__label::before {
+    background-color: $active-inputs-background;
+  }
+
+  &:active + .radio-button__label::after {
+    background-color: rgba($dark-gray, 0.3);
+  }
 }
