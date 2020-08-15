@@ -18,10 +18,18 @@
     left: calc(50% - 51px);
     width: 102px;
   }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 176px);
+    width: 269px;
+  }
 }
 
 .main-nav__logo {
   position: absolute;
+  z-index: 10;
   top: 0;
   left: calc(50% - 51px);
 }
@@ -30,6 +38,7 @@
   position: absolute;
   top: 16px;
   right: 20px;
+  z-index: 10;
   display: block;
   width: 23px;
   height: 24px;
