@@ -31,10 +31,36 @@
   margin-right: auto;
   padding: 0;
   border: none;
-  background-color: $white;
+  background-color: transparent;
+
+  & path {
+    fill: $controls-gray;
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: $dark-gray;
+  }
+
+  &:active path {
+    fill: rgba($dark-gray, 0.3);
+  }
 
   @media (min-width: $tablet-width) {
     margin-right: 41px;
+
+    & path {
+      fill: $white;
+    }
+
+    &:hover path,
+    &:focus path {
+      fill: rgba($white, 0.6);
+    }
+
+    &:active path {
+      fill: rgba($white, 0.3);
+    }
   }
 }
 
@@ -62,7 +88,35 @@
   margin-right: 31px;
   padding: 0;
   border: none;
-  background-color: $white;
+  background-color: transparent;
+
+  & path {
+    fill: $controls-gray;
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: $dark-gray;
+  }
+
+  &:active path {
+    fill: rgba($dark-gray, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    & path {
+      fill: $white;
+    }
+
+    &:hover path,
+    &:focus path {
+      fill: rgba($white, 0.6);
+    }
+
+    &:active path {
+      fill: rgba($white, 0.3);
+    }
+  }
 }
 
 .video-controls__full-screen {
@@ -70,5 +124,33 @@
   height: 20px;
   padding: 0;
   border: none;
-  background-color: $white;
+  background-color: transparent;
+
+  & g {
+    fill: $controls-gray;
+  }
+
+  &:hover g,
+  &:focus g {
+    fill: $dark-gray;
+  }
+
+  &:active g {
+    fill: rgba($dark-gray, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    & g {
+      fill: $white;
+    }
+
+    &:hover g,
+    &:focus g {
+      fill: rgba($white, 0.6);
+    }
+
+    &:active g {
+      fill: rgba($white, 0.3);
+    }
+  }
 }
