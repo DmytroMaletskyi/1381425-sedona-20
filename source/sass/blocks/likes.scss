@@ -29,7 +29,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    fill: $white;
+    & .likes__like-icon {
+      fill: $white;
+    }
   }
 }
 
