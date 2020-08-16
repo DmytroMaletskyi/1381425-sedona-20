@@ -78,6 +78,11 @@
       grid-row-start: 3;
       grid-row-end: 4;
       margin-bottom: 50px;
+
+      .form__fieldset::before,
+      .form__fieldset::after {
+        top: 26px;
+      }
     }
 
     &:nth-of-type(5) {
@@ -93,6 +98,26 @@
     &:nth-of-type(5) {
       & .form__legend {
         text-align: center;
+      }
+
+      .form__fieldset::before {
+        position: absolute;
+        top: 9px;
+        left: 0;
+        content: "";
+        height: 1px;
+        width: 123px;
+        background-color: $separator-gray;
+      }
+
+      .form__fieldset::after {
+        position: absolute;
+        top: 9px;
+        right: 0;
+        content: "";
+        height: 1px;
+        width: 123px;
+        background-color: $separator-gray;
       }
     }
   }
@@ -115,30 +140,11 @@
     &:nth-of-type(4),
     &:nth-of-type(5) {
       .form__fieldset::before {
-        position: absolute;
-        top: 9px;
-        left: 0;
-        content: "";
-        height: 1px;
         width: 280px;
-        background-color: $separator-gray;
       }
 
       .form__fieldset::after {
-        position: absolute;
-        top: 9px;
-        right: 0;
-        content: "";
-        height: 1px;
         width: 280px;
-        background-color: $separator-gray;
-      }
-    }
-
-    &:nth-of-type(4) {
-      .form__fieldset::before,
-      .form__fieldset::after {
-        top: 26px;
       }
     }
   }
