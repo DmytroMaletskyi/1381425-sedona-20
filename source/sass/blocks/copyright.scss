@@ -13,12 +13,12 @@
   top: -5px;
   right: 0;
 
-  &:hover path,
-  &:focus path {
+  &:hover .copyright__logo,
+  &:focus .copyright__logo {
     fill: $main-blue;
   }
 
-  &:active path {
+  &:active .copyright__logo {
     fill: rgba($black, 0.3);
   }
 }

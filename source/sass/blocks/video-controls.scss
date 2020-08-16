@@ -33,32 +33,32 @@
   border: none;
   background-color: transparent;
 
-  & path {
+  & .video-controls__replay-icon {
     fill: $controls-gray;
   }
 
-  &:hover path,
-  &:focus path {
+  &:hover .video-controls__replay-icon,
+  &:focus .video-controls__replay-icon {
     fill: $dark-gray;
   }
 
-  &:active path {
+  &:active .video-controls__replay-icon {
     fill: rgba($dark-gray, 0.3);
   }
 
   @media (min-width: $tablet-width) {
     margin-right: 41px;
 
-    & path {
+    & .video-controls__replay-icon {
       fill: $white;
     }
 
-    &:hover path,
-    &:focus path {
+    &:hover .video-controls__replay-icon,
+    &:focus .video-controls__replay-icon {
       fill: rgba($white, 0.6);
     }
 
-    &:active path {
+    &:active .video-controls__replay-icon {
       fill: rgba($white, 0.3);
     }
   }
@@ -90,30 +90,30 @@
   border: none;
   background-color: transparent;
 
-  & path {
+  & .video-controls__subtitles-icon {
     fill: $controls-gray;
   }
 
-  &:hover path,
-  &:focus path {
+  &:hover .video-controls__subtitles-icon,
+  &:focus .video-controls__subtitles-icon {
     fill: $dark-gray;
   }
 
-  &:active path {
+  &:active .video-controls__subtitles-icon {
     fill: rgba($dark-gray, 0.3);
   }
 
   @media (min-width: $tablet-width) {
-    & path {
+    & .video-controls__subtitles-icon {
       fill: $white;
     }
 
-    &:hover path,
-    &:focus path {
+    &:hover .video-controls__subtitles-icon,
+    &:focus .video-controls__subtitles-icon {
       fill: rgba($white, 0.6);
     }
 
-    &:active path {
+    &:active .video-controls__subtitles-icon {
       fill: rgba($white, 0.3);
     }
   }
@@ -126,30 +126,30 @@
   border: none;
   background-color: transparent;
 
-  & g {
+  & .video-controls__fullscreen-icon {
     fill: $controls-gray;
   }
 
-  &:hover g,
-  &:focus g {
+  &:hover .video-controls__fullscreen-icon,
+  &:focus .video-controls__fullscreen-icon {
     fill: $dark-gray;
   }
 
-  &:active g {
+  &:active .video-controls__fullscreen-icon {
     fill: rgba($dark-gray, 0.3);
   }
 
   @media (min-width: $tablet-width) {
-    & g {
+    & .video-controls__fullscreen-icon {
       fill: $white;
     }
 
-    &:hover g,
-    &:focus g {
+    &:hover .video-controls__fullscreen-icon,
+    &:focus .video-controls__fullscreen-icon {
       fill: rgba($white, 0.6);
     }
 
-    &:active g {
+    &:active .video-controls__fullscreen-icon {
       fill: rgba($white, 0.3);
     }
   }
