@@ -10,6 +10,7 @@
 
   @include text-styling($size: 21px, $weight: 700, $height: 26px, $transform: uppercase);
   color: $white;
+  text-decoration: none;
 
   background-color: $main-blue;
   border: none;
