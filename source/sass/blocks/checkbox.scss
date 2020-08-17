@@ -30,16 +30,20 @@
     content: url("../img/icon-tick.svg");
   }
 
-  &:hover + .checkbox__label::before,
-  &:focus + .checkbox__label::before {
+  &:not(:disabled):hover + .checkbox__label::before,
+  &:not(:disabled):focus + .checkbox__label::before {
     background-color: $border-color;
   }
 
-  &:active + .checkbox__label::before {
+  &:not(:disabled):active + .checkbox__label::before {
     background-color: $active-inputs-background;
   }
 
-  &:active + .checkbox__label::after {
+  &:not(:disabled):active + .checkbox__label::after {
     opacity: 0.3;
+  }
+
+  &:disabled + .checkbox__label {
+    opacity: 0.4;
   }
 }
