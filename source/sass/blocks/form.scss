@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .form {
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -14,7 +14,7 @@
 
   @media (min-width: $desktop-width) {
     width: 100%;
-    margin-bottom: 68px;
+    margin-bottom: 67px;
   }
 }
 
@@ -45,6 +45,35 @@
     position: relative;
     padding-top: 0;
     border: none;
+
+    &:nth-of-type(2),
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+      & .form__legend {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .form__fieldset::before {
+        position: absolute;
+        top: 9px;
+        left: 0;
+        content: "";
+        height: 1px;
+        width: 123px;
+        background-color: $separator-gray;
+      }
+
+      .form__fieldset::after {
+        position: absolute;
+        top: 9px;
+        right: 0;
+        content: "";
+        height: 1px;
+        width: 123px;
+        background-color: $separator-gray;
+      }
+    }
 
     &:nth-of-type(1) {
       grid-column-start: 2;
@@ -91,34 +120,6 @@
       grid-row-start: 4;
       grid-row-end: 5;
       margin-bottom: 54px;
-    }
-
-    &:nth-of-type(2),
-    &:nth-of-type(4),
-    &:nth-of-type(5) {
-      & .form__legend {
-        text-align: center;
-      }
-
-      .form__fieldset::before {
-        position: absolute;
-        top: 9px;
-        left: 0;
-        content: "";
-        height: 1px;
-        width: 123px;
-        background-color: $separator-gray;
-      }
-
-      .form__fieldset::after {
-        position: absolute;
-        top: 9px;
-        right: 0;
-        content: "";
-        height: 1px;
-        width: 123px;
-        background-color: $separator-gray;
-      }
     }
   }
 
@@ -174,6 +175,7 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    margin: 0;
     text-align: left;
     font-size: 21px;
   }
