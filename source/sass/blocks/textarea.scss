@@ -19,14 +19,14 @@
     opacity: 1;
   }
 
-  &:hover{
+  &:hover {
     background-color: $border-color;
     border-color: $border-color;
     outline: none;
   }
 
   &:active,
-  &:focus  {
+  &:focus {
     background-color: white;
     border-color: $border-color;
   }
