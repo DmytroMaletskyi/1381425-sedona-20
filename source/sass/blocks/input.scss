@@ -24,18 +24,19 @@
 
   &::placeholder {
     color: $black;
+    opacity: 1;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $border-color;
     border-color: $border-color;
-    outline: none;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     background-color: white;
     border-color: $border-color;
+    outline: none;
   }
 
   &:active:focus {
