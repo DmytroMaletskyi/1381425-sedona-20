@@ -43,16 +43,20 @@
     }
   }
 
-  &:hover + .radio-button__label::before,
-  &:focus + .radio-button__label::before {
+  &:not(:disabled):hover + .radio-button__label::before,
+  &:not(:disabled):focus + .radio-button__label::before {
     background-color: $border-color;
   }
 
-  &:active + .radio-button__label::before {
+  &:not(:disabled):active + .radio-button__label::before {
     background-color: $active-inputs-background;
   }
 
-  &:active + .radio-button__label::after {
+  &:not(:disabled):active + .radio-button__label::after {
     background-color: rgba($dark-gray, 0.3);
+  }
+
+  &:disabled + .radio-button__label {
+    opacity: 0.4;
   }
 }

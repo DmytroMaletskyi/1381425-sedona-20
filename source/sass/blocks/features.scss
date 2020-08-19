@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   width: 81.25%;
-  max-width: 484px;
+  max-width: 487px;
   margin: 0 auto 32px;
 
   @media (min-width: $tablet-width) {
@@ -31,7 +31,7 @@
 
 .features__title {
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 
   @include text-styling($size: 18px, $weight: 700, $height: 26px, $transform: uppercase);
   text-align: center;
