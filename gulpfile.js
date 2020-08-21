@@ -9,6 +9,7 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
+const del = require("del");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -24,7 +25,7 @@ const styles = () => {
     .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -33,7 +34,7 @@ exports.styles = styles;
 // Images
 
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  return gulp.src("build/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.mozjpeg({ progressive: true }),
@@ -46,9 +47,9 @@ exports.images = images;
 // Webps
 
 const webps = () => {
-  return gulp.src("source/img/**/*.{png,jpg}")
+  return gulp.src("build/img/**/*.{png,jpg}")
     .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.webps = webps;
@@ -56,20 +57,69 @@ exports.webps = webps;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/**/icon-*.svg")
+  return gulp.src("build/img/**/icon-*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.sprite = sprite;
+
+// Copy
+
+const copy = () => {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**/*.{png,jpg,svg}",
+    "source/js/**"
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"));
+};
+
+exports.copy = copy;
+
+// HTML
+
+const html = () => {
+  return gulp.src("source/*.html",
+    {
+      base: "source"
+    })
+    .pipe(gulp.dest("build"));
+}
+
+exports.html = html;
+
+// Clean
+
+const clean = () => {
+  return del("build");
+}
+
+exports.clean = clean;
+
+// Build
+
+const build = gulp.series(
+  clean,
+  copy,
+  styles,
+  images,
+  webps,
+  sprite,
+  html
+);
+
+exports.build = build;
 
 // Server
 
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -88,5 +138,5 @@ const watcher = () => {
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  build, server, watcher
 );
