@@ -88,7 +88,11 @@ const html = () => {
     {
       base: "source"
     })
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      conservativeCollapse: true,
+      preserveLineBreaks: true,
+    }))
     .pipe(gulp.dest("build"));
 }
 
