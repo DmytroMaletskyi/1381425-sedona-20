@@ -1,31 +1,31 @@
 @import "../mixins.scss";
 
 .likes {
-  position: relative;
-  min-width: 66px;
+  display: flex;
+  align-items: flex-start;
   box-sizing: border-box;
-  padding-left: 37px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 14px;
+    padding-top: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 15px;
   }
 }
 
 .likes__like-button {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 22px;
   height: 21px;
   box-sizing: border-box;
   padding: 0;
+  margin-right: 15px;
   border: none;
   background-color: transparent;
 
 
   @media (min-width: $tablet-width) {
-    top: 14px;
-    left: 4px;
+    margin-right: 10px;
   }
 
   @media (min-width: $desktop-width) {
