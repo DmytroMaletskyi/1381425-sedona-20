@@ -11,6 +11,11 @@
   height: 350px;
   box-sizing: border-box;
   border: none;
+
+  @media (min-width: $desktop-width) {
+    width: 100vw;
+    left: calc(-50vw + 50%);
+  }
 }
 
 .map__image-wrapper {
